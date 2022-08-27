@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import {
+  ProfileImage,
+  StyledBody,
+  StyledContainer,
+  StyledHeader,
+  StyledLinkBody,
+} from "./components/StyledContainer";
+import styled from "styled-components";
+import Links from "./components/Links";
+import Footer from "./components/Footer";
+const ProfileHeaderText = styled.h2`
+  font-weight: normal;
+`;
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledBody>
+      <StyledContainer>
+        <StyledHeader>
+          <ProfileImage src="Rajarshi.jpeg" alt="profile" />
+          <ProfileHeaderText>Rajarshi Biswas</ProfileHeaderText>
+        </StyledHeader>
+        <StyledLinkBody>
+          <Links />
+        </StyledLinkBody>
+      </StyledContainer>
+      <Footer />
+    </StyledBody>
   );
-}
+};
 
 export default App;
